@@ -8,11 +8,13 @@
     "slice": "node ./src/slice.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "coverage": "jest --coverage && httpster -d coverage/lcov-report"
+    "coverage": "jest --coverage",
+    "coverage:server": "jest --coverage && httpster -d coverage/lcov-report"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.4",
     "slice-js": "0.0.0"
   },
   "devDependencies": {

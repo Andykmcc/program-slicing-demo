@@ -22,7 +22,8 @@ describe('greet', () => {
   let logSpy;
 
   beforeAll(() => {
-    logSpy = jest.spyOn(console, 'log');
+    logSpy = jest.spyOn(console, 'log')
+      .mockImplementation(() => {});
   });
 
   afterAll(() => {
@@ -41,7 +42,8 @@ describe('repeat', () => {
   let testFunc;
 
   beforeEach(() => {
-    logSpy = jest.spyOn(console, 'log');
+    logSpy = jest.spyOn(console, 'log')
+      .mockImplementation(() => {});
     testFunc = jest.fn();
   });
 
@@ -49,7 +51,7 @@ describe('repeat', () => {
     logSpy.mockReset();
     logSpy.mockRestore();
   });
-  
+
   test('should be called 3 times', () => {
     lib.repeat(testFunc, 3);
     expect(testFunc).toHaveBeenCalledTimes(3);
@@ -90,7 +92,8 @@ describe('notUsed', () => {
   let logSpy;
 
   beforeAll(() => {
-    logSpy = jest.spyOn(console, 'log');
+    logSpy = jest.spyOn(console, 'log')
+      .mockImplementation(() => {});
   });
 
   afterAll(() => {

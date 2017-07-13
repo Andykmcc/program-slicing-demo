@@ -1,3 +1,6 @@
+const _ = require('lodash');
+const passAny = require('./pass-any');
+
 function square(a) {
   return a * a;
 }
