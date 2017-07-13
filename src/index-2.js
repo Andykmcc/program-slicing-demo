@@ -19,9 +19,13 @@ lib.repeat = function (func, n) {
   const pathNotTaken = false;
   // Dead code removal
   // Was passible because Dynamic slice
-  for (let i = 0; i<n; i++) {
-    func();
-  }
+  // if (n < 1) {
+  //   console.log('you made this a noop');
+  // } else {
+    for (let i = 0; i<n; i++) {
+      func();
+    }
+  // }
 };
 
 lib.square = function (a) {
